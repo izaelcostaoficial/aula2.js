@@ -10,19 +10,19 @@ body {
 
 /* Título Principal (Apresentação) */
 h1 {
-  color: #4a90e2; /* Um azul mais claro e moderno para destacar no fundo escuro */
+  color: #b20ae6; /* Um azul mais claro e moderno para destacar no fundo escuro */
   font-size: 24px;
 }
 
 /* Título de Perguntas */
 h2 {
-  color: #2ecc71; /* Um verde bem vivo e visível */
+  color: #980dd8; /* Um verde bem vivo e visível */
   font-size: 24px;
 }
 
 /* Títulos das Perguntas (h3) */
 h3 {
-  color: #f1c40f; /* Um amarelo ouro que se destaca perfeitamente no fundo escuro */
+  color: #c09e14; /* Um amarelo ouro que se destaca perfeitamente no fundo escuro */
   font-size: 22px;
 }
 
@@ -35,7 +35,7 @@ h3 {
 
 /* Parágrafos (Apresentação) */
 p {
-  color: #ffffff; /* Texto branco para leitura perfeita no fundo escuro */
+  color: #50490c; /* Texto branco para leitura perfeita no fundo escuro */
   font-size: 19px;
   line-height: 1.5;
 }
@@ -67,4 +67,3 @@ button:hover {
   text-align: center;
   margin-top: 25px;
 }
-
