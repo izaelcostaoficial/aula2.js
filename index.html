@@ -3,44 +3,84 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aula 2 - Java Script </title>
+    <title>Aula 2 - JavaScript</title>
+    <!-- O link do CSS DEVE ficar sempre aqui dentro do HEAD -->
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Apresentação</h1> 
-    <p>Olá, meu nome é Izael, sou estudante do Naah/s, moro no Brasil-Paraná-Santa Amélia, estudo no ensino médio, tenho 18 anos, sou altas habilidades. </p>
-    <img src="foto/foto.jpg" alt="Imagem do aluno Izael">
-    <h2 id = "perguntas">perguntas</h2>
-    <h3> Qual é a minha cidade de nascimento?</h3>
-    <button onclick="respostas('errada')">Londrina</button>
-    <button onclick="respostas('errada')">Porecatu</button>
-    <button onclick="respostas('correta')">Santo Antônio da Platina</button>
-    <h3>Qual é a minhacor favorita?</h3>
-    <button onclick="respostas('errada')">Verde</button>
-    <button onclick="respostas('errada')">Azul</button>
-    <button onclick="respostas('correta')">Amarelo</button>
-    <h4>Qual é a minha matéria favorita?</h4>
-    <button onclick="respostas('errada')">Ciências</button>
-    <button onclick="respostas('errada')">Português</button>
-    <button onclick="respostas('correta')">Matemática</button>
-    <h5>Qual é o meu esporte favorito?</h5>
-    <button onclick="respostas('errada')">Futebol</button>
-    <button onclick="respostas('errada')">Vôlei</button>
-    <button onclick="respostas('correta')">Basquete</button>
-    <h6>Qual é o meu animal favorito?</h6>
-    <button onclick="respostas('correta')">Cachorro</button>
-    <button onclick="respostas('errada')">Gato</button>
-    <button onclick="respostas('errada')">Cavalo</button>
 
-    <h7> Qual é a minha comida favorita?</h7>
-    <button onclick="respostas('errada')">Pizza</button>
-    <button onclick="respostas('correta')">Lasanha</button>
-    <button onclick="respostas('errada')">Hambúrguer</button>
-    <head>
-    <link rel="stylesheet" href="style.css">
-    </head>
+    <div class="apresentacao">
+        <h1>Apresentação</h1> 
+        <p>Olá, meu nome é Izael, sou estudante do Naah/s, moro no Brasil-Paraná-Santa Amélia, estudo no ensino médio, tenho 18 anos, sou altas habilidades.</p>
+        <img src="foto/foto.jpg" alt="Imagem do aluno Izael">
+    </div>
+
+    <h2 id="perguntas">Perguntas</h2>
+
+    <!-- Pergunta 1 -->
+    <div class="secao-pergunta">
+        <h3>Qual é a minha cidade de nascimento?</h3>
+        <div class="grupo-botoes">
+            <button onclick="respostas('errada')">Londrina</button>
+            <button onclick="respostas('errada')">Porecatu</button>
+            <button onclick="respostas('correta')">Santo Antônio da Platina</button>
+        </div>
+    </div>
+
+    <!-- Pergunta 2 -->
+    <div class="secao-pergunta">
+        <h3>Qual é a minha cor favorita?</h3>
+        <div class="grupo-botoes">
+            <button onclick="respostas('errada')">Verde</button>
+            <button onclick="respostas('errada')">Azul</button>
+            <button onclick="respostas('correta')">Amarelo</button>
+        </div>
+    </div>
+
+    <!-- Pergunta 3 -->
+    <div class="secao-pergunta">
+        <h3>Qual é a minha matéria favorita?</h3>
+        <div class="grupo-botoes">
+            <button onclick="respostas('errada')">Ciências</button>
+            <button onclick="respostas('errada')">Português</button>
+            <button onclick="respostas('correta')">Matemática</button>
+        </div>
+    </div>
+
+    <!-- Pergunta 4 -->
+    <div class="secao-pergunta">
+        <h3>Qual é o meu esporte favorito?</h3>
+        <div class="grupo-botoes">
+            <button onclick="respostas('errada')">Futebol</button>
+            <button onclick="respostas('errada')">Vôlei</button>
+            <button onclick="respostas('correta')">Basquete</button>
+        </div>
+    </div>
+
+    <!-- Pergunta 5 -->
+    <div class="secao-pergunta">
+        <h3>Qual é o meu animal favorito?</h3>
+        <div class="grupo-botoes">
+            <button onclick="respostas('correta')">Cachorro</button>
+            <button onclick="respostas('errada')">Gato</button>
+            <button onclick="respostas('errada')">Cavalo</button>
+        </div>
+    </div>
+
+    <!-- Pergunta 6 (Substituído h7 por h3 padrão para alinhar com as outras) -->
+    <div class="secao-pergunta">
+        <h3>Qual é a minha comida favorita?</h3>
+        <div class="grupo-botoes">
+            <button onclick="respostas('errada')">Pizza</button>
+            <button onclick="respostas('correta')">Lasanha</button>
+            <button onclick="respostas('errada')">Hambúrguer</button>
+        </div>
+    </div>
+
+    <!-- Elemento onde o JavaScript exibe a resposta -->
     <p id="resposta"></p>
-
 
     <script src="script.js"></script>
 </body>
 </html>
+
