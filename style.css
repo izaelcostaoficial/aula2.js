@@ -1,0 +1,54 @@
+h1 {
+  color: blue;
+  font-size: 24px;
+}
+p {
+  color: black;
+  font-size: 18px;
+}
+h2 {
+  color: rgb(166, 255, 0);
+  font-size: 24px;
+}
+p {
+  color: black;
+  font-size: 18px;
+}
+h3 {
+  color: rgb(0, 255, 98);
+  font-size: 24px;
+}
+p {
+  color: black;
+  font-size: 18px;
+}
+h4 {
+  color: rgb(255, 145, 0);
+  font-size: 24px;
+}
+p {
+  color: rgb(0, 0, 0);
+  font-size: 18px;
+}
+h5 {
+  color: blue;
+  font-size: 24px;
+}
+p {
+  color: black;
+  font-size: 18px;
+}h6 {
+  color: red;
+  font-size: 24px;
+}
+p {
+  color: rgb(0, 0, 0);
+  font-size: 18px;
+}h7 {
+  color: rgb(255, 0, 255);
+  font-size: 24px;
+}
+p {
+  color: rgb(211, 32, 32);
+  font-size: 18px;
+}
