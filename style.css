@@ -1,31 +1,70 @@
-/* Estilo do título principal da apresentação */
+/* Configurações básicas da página */
+body {
+  background-color: #1e1e24; /* Um fundo escuro moderno (cinza grafite) */
+  font-family: Arial, sans-serif;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  transition: background-color 0.4s; /* Deixa a mudança de cor do JavaScript suave */
+}
+
+/* Título Principal (Apresentação) */
 h1 {
-  color: blue;
+  color: #4a90e2; /* Um azul mais claro e moderno para destacar no fundo escuro */
   font-size: 24px;
 }
 
-/* Estilo do título "Perguntas" */
+/* Título de Perguntas */
 h2 {
-  color: rgb(166, 255, 0);
+  color: #2ecc71; /* Um verde bem vivo e visível */
   font-size: 24px;
 }
 
-/* Estilo que padroniza TODAS as suas perguntas de h3 até h6 */
-h3, h4, h5, h6 {
-  color: rgb(45, 87, 61);
-  font-size: 24px;
+/* Títulos das Perguntas (h3) */
+h3 {
+  color: #f1c40f; /* Um amarelo ouro que se destaca perfeitamente no fundo escuro */
+  font-size: 22px;
 }
 
-/* A classe que criamos para substituir o antigo h7 */
+/* Classe para substituir o antigo h7 (última pergunta) */
 .texto-destaque-rosa {
-  color: rgb(255, 0, 255);
-  font-size: 25px;
+  color: #e84393; /* Um rosa moderno e forte */
+  font-size: 22px;
   font-weight: bold;
 }
 
-/* Estilo para todos os parágrafos do seu site */
+/* Parágrafos (Apresentação) */
 p {
-  color: rgb(31, 28, 28);
+  color: #ffffff; /* Texto branco para leitura perfeita no fundo escuro */
   font-size: 19px;
+  line-height: 1.5;
+}
+
+/* TODOS OS BOTÕES DO SITE */
+button {
+  background-color: #ffffff; /* Fundo branco para os botões aparecerem bem */
+  color: #1e1e24; /* Texto do botão na cor do fundo escuro */
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+  padding: 10px 20px;
+  margin: 5px;
+  border-radius: 8px; /* Bordas arredondadas nos botões */
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+/* Efeito visual ao passar o mouse por cima do botão */
+button:hover {
+  background-color: #f1c40f; /* O botão fica amarelo ao passar o mouse */
+  transform: scale(1.05); /* O botão cresce um pouquinho */
+}
+
+/* Estilo para a mensagem de erro ou acerto do JavaScript */
+#resposta {
+  font-size: 22px;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 25px;
 }
 
