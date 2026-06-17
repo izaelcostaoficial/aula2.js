@@ -2,21 +2,16 @@
 
 function respostas(status) {
 
+    // Cria a variável uma única vez para usar na função toda
     let resposta = document.getElementById('resposta');
 
     if (status === 'correta') {
-    
-        
+        // Se acertar, o texto muda e o fundo fica verde
         resposta.textContent = 'Parabéns, você acertou!';
-        //alert('Parabéns, você acertou!')
         document.body.style.backgroundColor = 'green';
     } else {
-        let resposta = document.getElementById('resposta');
+        // Se errar, o texto muda e o fundo fica vermelho
         resposta.textContent = 'Resposta incorreta, tente novamente!';
-        //alert('Resposta incorreta, tente novamente!')
         document.body.style.backgroundColor = 'red';
     }
-
-
- 
 }
