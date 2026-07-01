@@ -1,69 +1,80 @@
 /* Configurações básicas da página */
-body {
-  background-color: #1e1e24; /* Um fundo escuro moderno (cinza grafite) */
+body {      
   font-family: Arial, sans-serif;
   max-width: 600px;
-  margin: 0 auto;
+  margin: 40px auto; 
   padding: 20px;
-  transition: background-color 0.4s; /* Deixa a mudança de cor do JavaScript suave */
+  background-color: #1e1e24; /* Fundo escuro moderno */
+  color: #ffffff; 
+  text-align: center; 
+  transition: background-color 0.4s, color 0.4s; /* Suaviza a troca de cores do JS */
 }
 
-/* Título Principal (Apresentação) */
+/* Título Principal */
 h1 {
-  color: #b20ae6; /* Um azul mais claro e moderno para destacar no fundo escuro */
+  color: #b20ae6; 
   font-size: 24px;
 }
 
-/* Título de Perguntas */
+/* Título Geral de Perguntas */
 h2 {
-  color: #980dd8; /* Um verde bem vivo e visível */
+  color: #980dd8; 
   font-size: 24px;
+  margin-top: 35px;
 }
 
-/* Títulos das Perguntas (h3) */
+/* Títulos Individuais das Perguntas */
 h3 {
-  color: #c09e14; /* Um amarelo ouro que se destaca perfeitamente no fundo escuro */
+  color: #c09e14; /* Amarelo ouro */
   font-size: 22px;
+  margin-top: 25px;
 }
 
-/* Classe para substituir o antigo h7 (última pergunta) */
-.texto-destaque-rosa {
-  color: #e84393; /* Um rosa moderno e forte */
-  font-size: 22px;
-  font-weight: bold;
-}
-
-/* Parágrafos (Apresentação) */
+/* Parágrafo de Apresentação */
 p {
-  color: #50490c; /* Texto branco para leitura perfeita no fundo escuro */
+  color: #e0e0e0; 
   font-size: 19px;
   line-height: 1.5;
 }
 
-/* TODOS OS BOTÕES DO SITE */
+/* Agrupamento de botões */
+.grupo-botoes {
+  margin-bottom: 20px;
+}
+
+/* Configuração de todos os botões */
 button {
-  background-color: #ffffff; /* Fundo branco para os botões aparecerem bem */
-  color: #1e1e24; /* Texto do botão na cor do fundo escuro */
+  background-color: #ffffff; 
+  color: #1e1e24; 
   font-size: 16px;
   font-weight: bold;
   border: none;
   padding: 10px 20px;
   margin: 5px;
-  border-radius: 8px; /* Bordas arredondadas nos botões */
+  border-radius: 8px; 
   cursor: pointer;
   transition: all 0.2s;
 }
 
-/* Efeito visual ao passar o mouse por cima do botão */
+/* Efeito ao passar o mouse */
 button:hover {
-  background-color: #f1c40f; /* O botão fica amarelo ao passar o mouse */
-  transform: scale(1.05); /* O botão cresce um pouquinho */
+  background-color: #f1c40f; 
+  transform: scale(1.05); 
 }
 
-/* Estilo para a mensagem de erro ou acerto do JavaScript */
+/* Estilização da foto */
+img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+  margin-top: 15px;
+}
+
+/* Mensagem de acerto/erro do JavaScript */
 #resposta {
   font-size: 22px;
   font-weight: bold;
   text-align: center;
-  margin-top: 25px;
+  margin-top: 30px;
+  padding: 10px;
 }
