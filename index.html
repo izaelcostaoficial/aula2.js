@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Aula 2 - JavaScript</title>
+    <!-- Link do CSS sempre dentro do HEAD -->
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -20,8 +21,8 @@
     <div class="secao-pergunta">
         <h3>Qual é a minha cidade de nascimento?</h3>
         <div class="grupo-botoes">
-            <button onclick="respostas('errada')">Londrina</button>
-            <button onclick="respostas('errada')">Porecatu</button>
+            <button onclick="respostas('errada')">Santa Amélia</button>
+            <button onclick="respostas('errada')">Bandeirantes</button>
             <button onclick="respostas('correta')">Santo Antônio da Platina</button>
         </div>
     </div>
@@ -66,7 +67,7 @@
         </div>
     </div>
 
-    <!-- Pergunta 6 (Substituído h7 por h3 padrão para alinhar com as outras) -->
+    <!-- Pergunta 6 -->
     <div class="secao-pergunta">
         <h3>Qual é a minha comida favorita?</h3>
         <div class="grupo-botoes">
@@ -76,10 +77,10 @@
         </div>
     </div>
 
-    <!-- Elemento onde o JavaScript exibe a resposta -->
+    <!-- Elemento único onde o JavaScript vai exibir o resultado das respostas -->
     <p id="resposta"></p>
 
+    <!-- Chamada única do script JavaScript no final de toda a estrutura -->
     <script src="script.js"></script>
 </body>
 </html>
-
