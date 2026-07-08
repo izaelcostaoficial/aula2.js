@@ -1,80 +1,333 @@
-/* Configurações básicas da página */
-body {      
-  font-family: Arial, sans-serif;
-  max-width: 600px;
-  margin: 40px auto; 
-  padding: 20px;
-  background-color: #1e1e24; /* Fundo escuro moderno */
-  color: #ffffff; 
-  text-align: center; 
-  transition: background-color 0.4s, color 0.4s; /* Suaviza a troca de cores do JS */
+/* ==========================
+   CONFIGURAÇÕES GERAIS
+========================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
 }
 
-/* Título Principal */
-h1 {
-  color: #b20ae6; 
-  font-size: 24px;
+body{
+
+    font-family:Arial, Helvetica, sans-serif;
+    background:#1e1e24;
+    color:white;
+
+    max-width:900px;
+
+    margin:auto;
+
+    padding:30px;
+
+    transition:.4s;
+
 }
 
-/* Título Geral de Perguntas */
-h2 {
-  color: #980dd8; 
-  font-size: 24px;
-  margin-top: 35px;
+/* ==========================
+   APRESENTAÇÃO
+========================== */
+
+.apresentacao{
+
+    background:#2d2d38;
+
+    padding:25px;
+
+    border-radius:15px;
+
+    text-align:center;
+
+    animation:entrada 1s;
+
 }
 
-/* Títulos Individuais das Perguntas */
-h3 {
-  color: #c09e14; /* Amarelo ouro */
-  font-size: 22px;
-  margin-top: 25px;
+.apresentacao h1{
+
+    color:#b20ae6;
+
+    margin-bottom:20px;
+
 }
 
-/* Parágrafo de Apresentação */
-p {
-  color: #e0e0e0; 
-  font-size: 19px;
-  line-height: 1.5;
+.apresentacao p{
+
+    font-size:18px;
+
+    line-height:30px;
+
 }
 
-/* Agrupamento de botões */
-.grupo-botoes {
-  margin-bottom: 20px;
+/* ==========================
+   FOTO
+========================== */
+
+img{
+
+    width:220px;
+
+    margin-top:20px;
+
+    border-radius:50%;
+
+    border:5px solid gold;
+
+    box-shadow:0px 0px 20px black;
+
 }
 
-/* Configuração de todos os botões */
-button {
-  background-color: #ffffff; 
-  color: #1e1e24; 
-  font-size: 16px;
-  font-weight: bold;
-  border: none;
-  padding: 10px 20px;
-  margin: 5px;
-  border-radius: 8px; 
-  cursor: pointer;
-  transition: all 0.2s;
+/* ==========================
+   TÍTULOS
+========================== */
+
+h2{
+
+    text-align:center;
+
+    margin:30px 0;
+
+    color:#f1c40f;
+
 }
 
-/* Efeito ao passar o mouse */
-button:hover {
-  background-color: #f1c40f; 
-  transform: scale(1.05); 
+h3{
+
+    margin-bottom:15px;
+
+    color:#ffd43b;
+
 }
 
-/* Estilização da foto */
-img {
-  max-width: 100%;
-  height: auto;
-  border-radius: 10px;
-  margin-top: 15px;
+/* ==========================
+   PONTUAÇÃO
+========================== */
+
+#pontuacao{
+
+    font-size:24px;
+
+    font-weight:bold;
+
+    color:#00ff99;
+
+    margin-bottom:15px;
+
 }
 
-/* Mensagem de acerto/erro do JavaScript */
-#resposta {
-  font-size: 22px;
-  font-weight: bold;
-  text-align: center;
-  margin-top: 30px;
-  padding: 10px;
+/* ==========================
+   TEMPO
+========================== */
+
+#tempo{
+
+    color:#00d9ff;
+
+    font-size:22px;
+
+    font-weight:bold;
+
+}
+
+/* ==========================
+   BARRA
+========================== */
+
+progress{
+
+    width:100%;
+
+    height:25px;
+
+    margin:20px 0 35px;
+
+}
+
+/* ==========================
+   PERGUNTAS
+========================== */
+
+.secao-pergunta{
+
+    background:#2d2d38;
+
+    padding:20px;
+
+    border-radius:12px;
+
+    margin-bottom:25px;
+
+    box-shadow:0px 0px 12px rgba(0,0,0,.4);
+
+    transition:.3s;
+
+}
+
+.secao-pergunta:hover{
+
+    transform:translateY(-3px);
+
+}
+
+/* ==========================
+   BOTÕES
+========================== */
+
+.grupo-botoes{
+
+    margin-top:15px;
+
+}
+
+button{
+
+    padding:12px 20px;
+
+    margin:5px;
+
+    border:none;
+
+    border-radius:10px;
+
+    cursor:pointer;
+
+    font-size:16px;
+
+    font-weight:bold;
+
+    background:white;
+
+    transition:.3s;
+
+}
+
+button:hover{
+
+    background:#f1c40f;
+
+    transform:scale(1.05);
+
+}
+
+button:disabled{
+
+    background:#777;
+
+    color:white;
+
+    cursor:not-allowed;
+
+    transform:none;
+
+}
+
+/* ==========================
+   MENSAGEM
+========================== */
+
+#resultado{
+
+    margin-top:40px;
+
+}
+
+#resposta{
+
+    font-size:24px;
+
+    font-weight:bold;
+
+    padding:20px;
+
+    border-radius:12px;
+
+    background:#2d2d38;
+
+}
+
+/* ==========================
+   BOTÃO REINICIAR
+========================== */
+
+#reiniciar{
+
+    width:100%;
+
+    margin-top:30px;
+
+    background:#27ae60;
+
+    color:white;
+
+    font-size:18px;
+
+}
+
+#reiniciar:hover{
+
+    background:#229954;
+
+}
+
+/* ==========================
+   RODAPÉ
+========================== */
+
+footer{
+
+    margin-top:50px;
+
+    text-align:center;
+
+    color:#999;
+
+}
+
+/* ==========================
+   ANIMAÇÃO
+========================== */
+
+@keyframes entrada{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(-40px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+/* ==========================
+   CELULAR
+========================== */
+
+@media(max-width:700px){
+
+    body{
+
+        padding:15px;
+
+    }
+
+    img{
+
+        width:170px;
+
+    }
+
+    button{
+
+        width:100%;
+
+    }
+
 }
