@@ -1,198 +1,101 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Quiz - Apresentação Izael</title>
 
-    <link rel="stylesheet" href="style.css">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Quiz - Apresentação Izael</title>
+
+<link rel="stylesheet" href="style.css">
+
 </head>
+
+
 <body>
 
-    <div class="apresentacao">
 
-        <h1>🎓 Minha Apresentação</h1>
+<div class="apresentacao">
 
-        <p>
-            Olá! Meu nome é <strong>Izael</strong>, tenho 18 anos e sou estudante do
-            NAAH/S. Moro em Santa Amélia - Paraná, estudo no Ensino Médio e
-            participo do programa para estudantes com Altas Habilidades/Superdotação.
-        </p>
+<h1>🎓 Minha Apresentação</h1>
 
-        <img src="foto/foto.jpg" alt="Foto de Izael">
+<p>
+Olá, meu nome é Izael, sou estudante do NAAH/S,
+moro no Brasil - Paraná - Santa Amélia.
+Estudo no Ensino Médio, tenho 18 anos e sou
+estudante com Altas Habilidades/Superdotação.
+</p>
 
-    </div>
 
-    <hr>
+<img src="foto/foto.jpg" alt="Foto de Izael">
 
-    <h2>📝 Quiz</h2>
 
-    <p id="pontuacao">
-        🏆 Pontuação: 0/6
-    </p>
+</div>
 
-    <p>
-        ⏱ Tempo:
-        <span id="tempo">0</span> segundos
-    </p>
 
-    <progress id="barra" value="0" max="6"></progress>
 
-    <div class="secao-pergunta">
+<div class="quiz">
 
-        <h3>1 - Qual é minha cidade de nascimento?</h3>
 
-        <div class="grupo-botoes">
+<h2>📝 Quiz sobre mim</h2>
 
-            <button onclick="respostas('errada', this)">
-                Santa Amélia
-            </button>
 
-            <button onclick="respostas('errada', this)">
-                Bandeirantes
-            </button>
+<p id="pontuacao">
+🏆 Pontuação: 0
+</p>
 
-            <button onclick="respostas('correta', this)">
-                Santo Antônio da Platina
-            </button>
 
-        </div>
+<p>
+⏱ Tempo:
+<span id="tempo">0</span> segundos
+</p>
 
-    </div>
 
-    <div class="secao-pergunta">
 
-        <h3>2 - Qual é minha cor favorita?</h3>
+<div id="quiz-box">
 
-        <div class="grupo-botoes">
 
-            <button onclick="respostas('errada', this)">
-                Verde
-            </button>
+<h3 id="pergunta">
+Carregando pergunta...
+</h3>
 
-            <button onclick="respostas('errada', this)">
-                Azul
-            </button>
 
-            <button onclick="respostas('correta', this)">
-                Amarelo
-            </button>
+<div id="opcoes">
 
-        </div>
+</div>
 
-    </div>
 
-    <div class="secao-pergunta">
+</div>
 
-        <h3>3 - Qual é minha matéria favorita?</h3>
 
-        <div class="grupo-botoes">
 
-            <button onclick="respostas('errada', this)">
-                Português
-            </button>
+<button id="proximo" onclick="proximaPergunta()" disabled>
 
-            <button onclick="respostas('errada', this)">
-                Ciências
-            </button>
+Próxima pergunta ➡️
 
-            <button onclick="respostas('correta', this)">
-                Matemática
-            </button>
+</button>
 
-        </div>
 
-    </div>
 
-    <div class="secao-pergunta">
+<p id="resultado"></p>
 
-        <h3>4 - Qual é meu esporte favorito?</h3>
 
-        <div class="grupo-botoes">
 
-            <button onclick="respostas('errada', this)">
-                Futebol
-            </button>
+<button onclick="reiniciar()">
 
-            <button onclick="respostas('errada', this)">
-                Vôlei
-            </button>
+🔄 Reiniciar Quiz
 
-            <button onclick="respostas('correta', this)">
-                Basquete
-            </button>
+</button>
 
-        </div>
 
-    </div>
+</div>
 
-    <div class="secao-pergunta">
 
-        <h3>5 - Qual é meu animal favorito?</h3>
 
-        <div class="grupo-botoes">
+<script src="script.js"></script>
 
-            <button onclick="respostas('correta', this)">
-                Cachorro
-            </button>
-
-            <button onclick="respostas('errada', this)">
-                Gato
-            </button>
-
-            <button onclick="respostas('errada', this)">
-                Cavalo
-            </button>
-
-        </div>
-
-    </div>
-
-    <div class="secao-pergunta">
-
-        <h3>6 - Qual é minha comida favorita?</h3>
-
-        <div class="grupo-botoes">
-
-            <button onclick="respostas('errada', this)">
-                Pizza
-            </button>
-
-            <button onclick="respostas('correta', this)">
-                Lasanha
-            </button>
-
-            <button onclick="respostas('errada', this)">
-                Hambúrguer
-            </button>
-
-        </div>
-
-    </div>
-
-    <div id="resultado">
-
-        <p id="resposta">
-            Clique em uma resposta para começar o quiz.
-        </p>
-
-    </div>
-
-    <button id="reiniciar" onclick="location.reload()">
-        🔄 Reiniciar Quiz
-    </button>
-
-    <footer>
-
-        <hr>
-
-        <p>
-            Projeto desenvolvido por Izael • JavaScript
-        </p>
-
-    </footer>
-
-    <script src="script.js"></script>
 
 </body>
+
 </html>
