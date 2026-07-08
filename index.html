@@ -3,84 +3,196 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aula 2 - JavaScript</title>
-    <!-- Link do CSS sempre dentro do HEAD -->
+    <title>Quiz - Apresentação Izael</title>
+
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
     <div class="apresentacao">
-        <h1>Apresentação</h1> 
-        <p>Olá, meu nome é Izael, sou estudante do Naah/s, moro no Brasil-Paraná-Santa Amélia, estudo no ensino médio, tenho 18 anos, sou altas habilidades.</p>
-        <img src="foto/foto.jpg" alt="Imagem do aluno Izael">
+
+        <h1>🎓 Minha Apresentação</h1>
+
+        <p>
+            Olá! Meu nome é <strong>Izael</strong>, tenho 18 anos e sou estudante do
+            NAAH/S. Moro em Santa Amélia - Paraná, estudo no Ensino Médio e
+            participo do programa para estudantes com Altas Habilidades/Superdotação.
+        </p>
+
+        <img src="foto/foto.jpg" alt="Foto de Izael">
+
     </div>
 
-    <h2 id="perguntas">Perguntas</h2>
+    <hr>
 
-    <!-- Pergunta 1 -->
+    <h2>📝 Quiz</h2>
+
+    <p id="pontuacao">
+        🏆 Pontuação: 0/6
+    </p>
+
+    <p>
+        ⏱ Tempo:
+        <span id="tempo">0</span> segundos
+    </p>
+
+    <progress id="barra" value="0" max="6"></progress>
+
     <div class="secao-pergunta">
-        <h3>Qual é a minha cidade de nascimento?</h3>
+
+        <h3>1 - Qual é minha cidade de nascimento?</h3>
+
         <div class="grupo-botoes">
-            <button onclick="respostas('errada')">Santa Amélia</button>
-            <button onclick="respostas('errada')">Bandeirantes</button>
-            <button onclick="respostas('correta')">Santo Antônio da Platina</button>
+
+            <button onclick="respostas('errada', this)">
+                Santa Amélia
+            </button>
+
+            <button onclick="respostas('errada', this)">
+                Bandeirantes
+            </button>
+
+            <button onclick="respostas('correta', this)">
+                Santo Antônio da Platina
+            </button>
+
         </div>
+
     </div>
 
-    <!-- Pergunta 2 -->
     <div class="secao-pergunta">
-        <h3>Qual é a minha cor favorita?</h3>
+
+        <h3>2 - Qual é minha cor favorita?</h3>
+
         <div class="grupo-botoes">
-            <button onclick="respostas('errada')">Verde</button>
-            <button onclick="respostas('errada')">Azul</button>
-            <button onclick="respostas('correta')">Amarelo</button>
+
+            <button onclick="respostas('errada', this)">
+                Verde
+            </button>
+
+            <button onclick="respostas('errada', this)">
+                Azul
+            </button>
+
+            <button onclick="respostas('correta', this)">
+                Amarelo
+            </button>
+
         </div>
+
     </div>
 
-    <!-- Pergunta 3 -->
     <div class="secao-pergunta">
-        <h3>Qual é a minha matéria favorita?</h3>
+
+        <h3>3 - Qual é minha matéria favorita?</h3>
+
         <div class="grupo-botoes">
-            <button onclick="respostas('errada')">Ciências</button>
-            <button onclick="respostas('errada')">Português</button>
-            <button onclick="respostas('correta')">Matemática</button>
+
+            <button onclick="respostas('errada', this)">
+                Português
+            </button>
+
+            <button onclick="respostas('errada', this)">
+                Ciências
+            </button>
+
+            <button onclick="respostas('correta', this)">
+                Matemática
+            </button>
+
         </div>
+
     </div>
 
-    <!-- Pergunta 4 -->
     <div class="secao-pergunta">
-        <h3>Qual é o meu esporte favorito?</h3>
+
+        <h3>4 - Qual é meu esporte favorito?</h3>
+
         <div class="grupo-botoes">
-            <button onclick="respostas('errada')">Futebol</button>
-            <button onclick="respostas('errada')">Vôlei</button>
-            <button onclick="respostas('correta')">Basquete</button>
+
+            <button onclick="respostas('errada', this)">
+                Futebol
+            </button>
+
+            <button onclick="respostas('errada', this)">
+                Vôlei
+            </button>
+
+            <button onclick="respostas('correta', this)">
+                Basquete
+            </button>
+
         </div>
+
     </div>
 
-    <!-- Pergunta 5 -->
     <div class="secao-pergunta">
-        <h3>Qual é o meu animal favorito?</h3>
+
+        <h3>5 - Qual é meu animal favorito?</h3>
+
         <div class="grupo-botoes">
-            <button onclick="respostas('correta')">Cachorro</button>
-            <button onclick="respostas('errada')">Gato</button>
-            <button onclick="respostas('errada')">Cavalo</button>
+
+            <button onclick="respostas('correta', this)">
+                Cachorro
+            </button>
+
+            <button onclick="respostas('errada', this)">
+                Gato
+            </button>
+
+            <button onclick="respostas('errada', this)">
+                Cavalo
+            </button>
+
         </div>
+
     </div>
 
-    <!-- Pergunta 6 -->
     <div class="secao-pergunta">
-        <h3>Qual é a minha comida favorita?</h3>
+
+        <h3>6 - Qual é minha comida favorita?</h3>
+
         <div class="grupo-botoes">
-            <button onclick="respostas('errada')">Pizza</button>
-            <button onclick="respostas('correta')">Lasanha</button>
-            <button onclick="respostas('errada')">Hambúrguer</button>
+
+            <button onclick="respostas('errada', this)">
+                Pizza
+            </button>
+
+            <button onclick="respostas('correta', this)">
+                Lasanha
+            </button>
+
+            <button onclick="respostas('errada', this)">
+                Hambúrguer
+            </button>
+
         </div>
+
     </div>
 
-    <!-- Elemento único onde o JavaScript vai exibir o resultado das respostas -->
-    <p id="resposta"></p>
+    <div id="resultado">
 
-    <!-- Chamada única do script JavaScript no final de toda a estrutura -->
+        <p id="resposta">
+            Clique em uma resposta para começar o quiz.
+        </p>
+
+    </div>
+
+    <button id="reiniciar" onclick="location.reload()">
+        🔄 Reiniciar Quiz
+    </button>
+
+    <footer>
+
+        <hr>
+
+        <p>
+            Projeto desenvolvido por Izael • JavaScript
+        </p>
+
+    </footer>
+
     <script src="script.js"></script>
+
 </body>
 </html>
