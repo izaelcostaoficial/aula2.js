@@ -1,223 +1,349 @@
-// ==========================
-// VARIÁVEIS DO QUIZ
-// ==========================
+let perguntas = [
+
+{
+
+pergunta:"Qual é a minha cidade de nascimento?",
+
+opcoes:[
+
+"Santa Amélia",
+
+"Bandeirantes",
+
+"Santo Antônio da Platina"
+
+],
+
+correta:"Santo Antônio da Platina"
+
+},
+
+
+{
+
+pergunta:"Qual é a minha cor favorita?",
+
+opcoes:[
+
+"Verde",
+
+"Azul",
+
+"Amarelo"
+
+],
+
+correta:"Amarelo"
+
+},
+
+
+{
+
+pergunta:"Qual é a minha matéria favorita?",
+
+opcoes:[
+
+"Ciências",
+
+"Português",
+
+"Matemática"
+
+],
+
+correta:"Matemática"
+
+},
+
+
+{
+
+pergunta:"Qual é o meu esporte favorito?",
+
+opcoes:[
+
+"Futebol",
+
+"Vôlei",
+
+"Basquete"
+
+],
+
+correta:"Basquete"
+
+},
+
+
+{
+
+pergunta:"Qual é o meu animal favorito?",
+
+opcoes:[
+
+"Cachorro",
+
+"Gato",
+
+"Cavalo"
+
+],
+
+correta:"Cachorro"
+
+},
+
+
+{
+
+pergunta:"Qual é a minha comida favorita?",
+
+opcoes:[
+
+"Pizza",
+
+"Lasanha",
+
+"Hambúrguer"
+
+],
+
+correta:"Lasanha"
+
+}
+
+];
+
+
+
+// Variáveis
+
+let indice = 0;
 
 let pontos = 0;
 
-let perguntasRespondidas = 0;
-
-const totalPerguntas = 6;
-
 let segundos = 0;
 
+let tempo;
 
-// ==========================
-// CRONÔMETRO
-// ==========================
 
-let tempo = setInterval(function(){
 
-    segundos++;
+// Mistura perguntas
 
-    document.getElementById("tempo").textContent = segundos;
+perguntas.sort(()=>Math.random()-0.5);
+
+
+
+
+// Iniciar
+
+function iniciar(){
+
+
+tempo=setInterval(()=>{
+
+
+segundos++;
+
+
+document.getElementById("tempo").innerHTML=segundos;
+
 
 },1000);
 
 
-// ==========================
-// FUNÇÃO PRINCIPAL
-// ==========================
 
-function respostas(status, botao){
-
-
-    const resposta = document.getElementById("resposta");
-
-    const pontuacao = document.getElementById("pontuacao");
-
-    const barra = document.getElementById("barra");
-
-
-    // Localiza a pergunta atual
-
-    const pergunta = botao.parentElement.parentElement;
-
-
-    // Impede responder duas vezes
-
-    if(pergunta.classList.contains("respondida")){
-
-        return;
-
-    }
-
-
-    pergunta.classList.add("respondida");
-
-
-
-    // Desativa os botões da pergunta
-
-    const botoes = pergunta.querySelectorAll("button");
-
-
-    botoes.forEach(function(item){
-
-        item.disabled = true;
-
-    });
-
-
-
-    perguntasRespondidas++;
-
-
-
-    // Atualiza barra de progresso
-
-    barra.value = perguntasRespondidas;
-
-
-
-    // ==========================
-    // RESPOSTA CORRETA
-    // ==========================
-
-
-    if(status === "correta"){
-
-
-        pontos++;
-
-
-        resposta.innerHTML =
-        "✅ Parabéns! Você acertou!";
-
-
-        document.body.style.backgroundColor = "#176b3a";
-
-
-
-    }
-
-
-    // ==========================
-    // RESPOSTA ERRADA
-    // ==========================
-
-
-    else{
-
-
-        resposta.innerHTML =
-        "❌ Resposta incorreta!";
-
-
-        document.body.style.backgroundColor = "#8b1e1e";
-
-
-    }
-
-
-
-    // Atualiza pontuação
-
-
-    pontuacao.innerHTML =
-    `🏆 Pontuação: ${pontos}/${totalPerguntas}`;
-
-
-
-    // Verifica se acabou
-
-
-    if(perguntasRespondidas === totalPerguntas){
-
-
-        finalizarQuiz();
-
-
-    }
+mostrarPergunta();
 
 
 }
 
 
 
-// ==========================
-// FINAL DO QUIZ
-// ==========================
+
+// Mostrar pergunta
+
+function mostrarPergunta(){
 
 
-function finalizarQuiz(){
-
-
-    clearInterval(tempo);
-
-
-    const resposta = document.getElementById("resposta");
-
-
-    let mensagem = "";
+let atual=perguntas[indice];
 
 
 
-    if(pontos === 6){
+document.getElementById("pergunta").innerHTML=
 
-
-        mensagem =
-        "🏆 Mestre! Você acertou todas as perguntas!";
-
-
-    }
-
-
-    else if(pontos >= 4){
-
-
-        mensagem =
-        "🥇 Excelente! Você conhece muito sobre mim!";
-
-
-    }
-
-
-    else if(pontos >= 2){
-
-
-        mensagem =
-        "🥈 Muito bom! Continue aprendendo!";
-
-
-    }
-
-
-    else{
-
-
-        mensagem =
-        "🙂 Continue treinando para melhorar!";
-
-
-    }
+(indice+1)+" - "+atual.pergunta;
 
 
 
-    resposta.innerHTML +=
+let area=document.getElementById("opcoes");
 
-    `<br><br>
-    
-    Resultado Final:<br>
-    
-    Você acertou ${pontos} de ${totalPerguntas} perguntas.
-    
-    <br><br>
-    
-    ${mensagem}
-    
-    <br><br>
-    
-    ⏱ Tempo total: ${segundos} segundos`;
+
+area.innerHTML="";
+
+
+
+let alternativas=[...atual.opcoes];
+
+
+
+alternativas.sort(()=>Math.random()-0.5);
+
+
+
+alternativas.forEach(opcao=>{
+
+
+let botao=document.createElement("button");
+
+
+botao.innerHTML=opcao;
+
+
+
+botao.onclick=function(){
+
+verificar(opcao,botao);
+
+};
+
+
+
+area.appendChild(botao);
+
+
+});
+
+
+
+document.getElementById("proximo").disabled=true;
+
+
+}
+
+
+
+
+// Verificar resposta
+
+function verificar(resposta,botao){
+
+
+let correta=perguntas[indice].correta;
+
+
+let botoes=document.querySelectorAll("#opcoes button");
+
+
+
+botoes.forEach(botao=>{
+
+botao.disabled=true;
+
+});
+
+
+
+if(resposta===correta){
+
+
+pontos++;
+
+
+botao.style.background="#27ae60";
+
+
+document.getElementById("resultado").innerHTML=
+
+"✅ Resposta correta!";
+
+
+}
+
+else{
+
+
+botao.style.background="#c0392b";
+
+
+document.getElementById("resultado").innerHTML=
+
+"❌ Resposta errada!";
+
+
+}
+
+
+
+document.getElementById("pontuacao").innerHTML=
+
+"🏆 Pontuação: "+pontos;
+
+
+
+document.getElementById("proximo").disabled=false;
+
+
+}
+
+
+
+
+// Próxima pergunta
+
+function proximaPergunta(){
+
+
+indice++;
+
+
+document.getElementById("resultado").innerHTML="";
+
+
+
+if(indice < perguntas.length){
+
+
+mostrarPergunta();
+
+
+}
+
+else{
+
+
+finalizar();
+
+
+}
+
+
+}
+
+
+
+
+// Resultado final
+
+function finalizar(){
+
+
+clearInterval(tempo);
+
+
+
+document.getElementById("quiz-box").innerHTML=
+
+"🎉 Quiz Finalizado!";
+
+
+
+document.getElementById("resultado").innerHTML=
+
+"Você acertou "+pontos+" de "+perguntas.length+
+
+"<br><br>Tempo: "+segundos+" segundos";
 
 
 
@@ -225,28 +351,17 @@ function finalizarQuiz(){
 
 
 
-// ==========================
-// MODO ESCURO / CLARO EXTRA
-// ==========================
+
+// Reiniciar
+
+function reiniciar(){
 
 
-function modoClaro(){
-
-
-    document.body.style.backgroundColor = "#ffffff";
-
-    document.body.style.color = "#222";
+location.reload();
 
 
 }
 
 
-function modoEscuro(){
 
-
-    document.body.style.backgroundColor = "#1e1e24";
-
-    document.body.style.color = "#ffffff";
-
-
-}
+iniciar();
